@@ -24,10 +24,11 @@ export const connectToDatabase = async () => {
   cached.promise =
     cached.promise ||
     mongoose.connect(MONGODB_URL, {
-      dbName: "NexaVision",
+      dbName: "imaginify",
       bufferCommands: false,
     });
 
   cached.conn = await cached.promise;
+
   return cached.conn;
 };
